@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, Target, Users, Award, Rocket } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -34,9 +33,9 @@ const About = () => {
   ];
 
   return (
-    <div className="pt-16">
+    <div >
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+      <section className="bg-gradient-to-r from-primary/60 to-primary/80 text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6">About Tekrem</h1>
@@ -53,7 +52,7 @@ const About = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">
+                <div className="text-4xl font-bold text-primary mb-2">
                   {stat.number}
                 </div>
                 <div className="text-gray-600">{stat.label}</div>
@@ -88,7 +87,7 @@ const About = () => {
                 key={index}
                 className="text-center p-6 rounded-xl bg-white shadow-lg hover:shadow-xl transition-shadow"
               >
-                <div className="text-blue-600 mb-4 flex justify-center">
+                <div className="text-primary mb-4 flex justify-center">
                   {value.icon}
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{value.title}</h3>
@@ -100,19 +99,19 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-blue-600 text-white py-20">
+      <section className="bg-primary text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Join Our Journey</h2>
           <p className="text-xl mb-8">
             Let's create innovative solutions together
           </p>
           <Link
-            to="/contact"
-            className="inline-flex items-center px-6 py-3 rounded-full bg-white text-blue-600 font-semibold hover:bg-blue-50 transition-colors"
-          >
-            Get in Touch
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Link>
+              to="/contact"
+              className="inline-flex items-center px-6 py-3 rounded-full bg-white text-primary font-semibold hover:bg-accent hover:text-white transition-colors"
+            >
+              Get In Touch
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
         </div>
       </section>
     </div>
